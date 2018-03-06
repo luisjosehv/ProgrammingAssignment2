@@ -1,33 +1,17 @@
-## Put comments here that give an overall description of what your
-## functions do
 
 
-makeCacheMatrix <- function(x = matrix()) {
-  m  <- NULL
-  set <- function (y)
-  {
+
+makeCacheMatrix <- function (x = matrix () ) {  
+  m <- NULL                                     
+  set<- function (y) {                         
     x <<- y
-    m <<- NULL
+    inv <<-NULL
   }
   
-  get <- function ()
-  {
-    x
-  }
-  
-  setmean <- function(mean)
-  {
-    m <<- mean
-  }
-  
-  getmean <- function()
-  {
-    m
-  }
-  
-  list(set= set, get= get,
-       setmean = setmean
-       )
+  get <- function () x                       
+  setinv <- function (inverse) m <<-inverse  
+  getinv <- function() m                     #
+  list(set = set, get = get, setinv = setinv, getinv = getinv)
 }
 
 
